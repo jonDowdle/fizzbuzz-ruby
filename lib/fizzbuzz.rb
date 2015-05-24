@@ -2,21 +2,12 @@ class FizzBuzz
 
   def fizzbuzz number
     
-    @output = number
-
-    if number == 0
-      @output = number
-    elsif (number % 3) == 0 && (number % 5) == 0
-      @output = 'fizzbuzz'
-    elsif (number % 5) == 0
-      @output = 'buzz'
-    elsif (number % 3) == 0
-      @output = 'fizz'
-    else 
-      @output = number
-    end
-
-    return @output
+    return number if number == 0 
+    return 'fizzbuzz' if (number % 3) == 0 && (number % 5) == 0
+    return 'buzz' if (number % 5) == 0
+    return 'fizz' if (number % 3) == 0
+    return number
 
   end
+  
 end
